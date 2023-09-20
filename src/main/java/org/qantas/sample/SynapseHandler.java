@@ -25,7 +25,7 @@ public class SynapseHandler extends AbstractSynapseHandler {
 
             org.apache.axis2.context.MessageContext axis2MessageContext = ((Axis2MessageContext) messageContext).getAxis2MessageContext();
 
-            String restUrlPostfix = ((String) axis2MessageContext.getProperty("TransportInURL")).replace("/api/", "");
+            String restUrlPostfix = ((String) axis2MessageContext.getProperty("TransportInURL")).replaceFirst("/api/", "");
             axis2MessageContext.setProperty("TransportInURL",restFullRequestPath);
             axis2MessageContext.setProperty("REST_URL_POSTFIX",restUrlPostfix);
 
