@@ -1,4 +1,4 @@
-package org.qantas.sample;
+package org.handler.sample;
 
 import com.fasterxml.jackson.databind.util.TypeKey;
 import org.apache.axis2.addressing.EndpointReference;
@@ -18,7 +18,7 @@ public class SynapseHandler extends AbstractSynapseHandler {
 
 
         String api = (String) messageContext.getProperty("REST_FULL_REQUEST_PATH");
-        if(api != null && api.startsWith("/api")){
+        if(api != null && api.startsWith("/api/")){
 
             String restFullRequestPath = ((String) messageContext.getProperty("REST_FULL_REQUEST_PATH")).replaceFirst("/api", "");
             messageContext.setProperty("REST_FULL_REQUEST_PATH",restFullRequestPath);

@@ -1,4 +1,4 @@
-package org.qantas.sample;
+package org.handler.sample;
 
 public class Main {
     public static void main(String[] args) {
